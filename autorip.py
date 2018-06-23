@@ -18,7 +18,7 @@ def build_handbrake_list(device_or_iso, title, output):
 		"1,2,3,4,5,6,7,8,9,10",
 		"--subtitle",
 		"1,2,3,4,5,6,7,8,9,10",
-		"--preset=\'High Profile\'",
+		"--preset=\'Super HQ 1080p30 Surround\'",
 		"-o",
 		"'" + output + "'",
 		]
