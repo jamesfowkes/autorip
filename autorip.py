@@ -1,10 +1,9 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """Usage:
 	autorip.py <first_episode> <season> <series_name> <device_or_iso> <dvd_titles>... 
 
 """
 import sys
-#import argparse
 import docopt
 import logging
 
@@ -32,18 +31,8 @@ def get_logger():
 def get_output_name(series, season, episode):
 	return "{:s} S{:02d}E{:02d}.m4v".format(series, season, episode)
 
-def get_args():
-	#parser = argparse.ArgumentParser(description="Use HandBrakeCLI to rip episodes from a DVD")
-	#parser.add_argument("first_episode", type=int, help="Number of the first episode e.g. for episdes E04, E06 and E06, episode should be 4")
-	#parser.add_argument("dvd_titles", nargs='+', help="List of the DVD titles to be encoded in episode order")
-	#parser.add_argument("season", type=int, help="The DVD season")
-	#parser.add_argument("series_name", type=str, help="The name of the show")
-	#parser.add_argument("device_or_iso", type=str, help="The DVD device or ISO path to rip from.")
-	#parser.add_argument("-n", action="store_true", help="Show HandBrakeCLI commands without running them")
-	#return parser.parse_args()
-	return docopt.docopt(__doc__)
 
-args = get_args()
+args = docopt.docopt(__doc__)
 
 logging.basicConfig(level=logging.INFO)
 
